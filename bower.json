@@ -1,0 +1,10 @@
+{
+  "name": "Smart House Simulator",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "three.js": "threejs#*",
+    "bootstrap": "~3.3.6",
+    "purl": "~2.3.1"
+  }
+}

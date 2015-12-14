@@ -1,0 +1,3 @@
+interface RemoteService {
+  getMaxBrightness(): Parameter;
+}
