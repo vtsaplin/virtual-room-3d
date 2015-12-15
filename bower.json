@@ -1,5 +1,5 @@
 {
-  "name": "Smart House Simulator",
+  "name": "smart-house-simulator",
   "private": true,
   "dependencies": {
     "jquery": "~2.1.4",
