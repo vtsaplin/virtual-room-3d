@@ -29,6 +29,7 @@ The core concept is the observable Parameter which has a value ranging from 0 to
 - Add new object to the scene which will be simulated
 - Create new class and implement _VirtualDevice_ interface
 - Implement the device behavior and expose the state via parameters
+- Add an instance of _VirtualDevice_ to _VirtualDeviceManager_
 - Create UI controls linked to parameters using _ViewFactory_
 
 ## TODOs
