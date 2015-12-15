@@ -1,10 +1,20 @@
 class VirtualLight implements VirtualDevice {
 
+  private light: THREE.Light;
+  private color: THREE.Color;
+
+  private currentValue: number;
+  private value: number;
+
   constructor(private object: THREE.Object3D, private brightness: Parameter) {
-    var light = <THREE.Light> object.children[0];
-    var color = light.color;
+    this.light = <THREE.Light> object.children[0];
+    this.color = this.light.color;
+
     this.brightness.observe((value: number) => {
-      light.color = color.clone().multiplyScalar(value);
+      if (this.currentValue == null) {
+        this.currentValue = value;
+      }
+      this.value = value;
     });
   }
 
@@ -13,5 +23,9 @@ class VirtualLight implements VirtualDevice {
   }
 
   update(delta: number) {
+    if (this.currentValue != this.value) {
+      this.currentValue += (this.value - this.currentValue) * delta;
+      this.light.color = this.color.clone().multiplyScalar(this.currentValue);
+    }
   }
 }
