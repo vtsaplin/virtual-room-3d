@@ -1,5 +1,6 @@
 # Smart House Simulator
 The project shows basic principles of building **Typescript** / **Three.js** applications with **Gulp** and **Bower**.
+
 ![alt Screenshot](https://dl.dropboxusercontent.com/u/43792024/smart-house-simulator/screenshot.jpg)
 
 [Click here to see the demo](https://dl.dropboxusercontent.com/u/43792024/smart-house-simulator/index.html)
