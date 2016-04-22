@@ -1,5 +1,5 @@
 {
-  "name": "smart-house-simulator",
+  "name": "virtual-room-3d",
   "private": true,
   "dependencies": {
     "jquery": "~2.1.4",
