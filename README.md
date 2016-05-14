@@ -25,18 +25,3 @@ The application does not require any server side communication and therefore can
 You can use query parameters to configure application:
 - __shadows=true__ to render shadows
 - __latency=1000__ to set a simulated network latency in ms (default is 100ms)
-
-## The Concept
-The core concept is the observable Parameter which has a value ranging from 0 to 1. Parameters control the behavior of the virtual devices and can depend on each other. Devices are represented by 3D objects and light sources rendered on the screen. When the scene is loaded the application in its _init_ method looks for a specific object by name and wires it to the _VirtualDevice_. A _VirtualDevice_ is an object that encapsulates the state and exposes it via a set of parameters. Every _VirtualDevice_ has the _update_ method which are called by _VirtualDeviceManager_ on every frame. A _VirtualDevice_ can update its state in this method.
-
-## Extending Functionality
-- Add new object to the scene which will be simulated
-- Create new class and implement _VirtualDevice_ interface
-- Implement the device behavior and expose the state via parameters
-- Add an instance of _VirtualDevice_ to _VirtualDeviceManager_
-- Create UI controls linked to parameters using _ViewFactory_
-
-## TODOs
-- Implement more virtual devices
-- Add code comments
-- Add tests
